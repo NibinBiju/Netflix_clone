@@ -1,0 +1,5 @@
+{
+    "git.autorefresh": true,
+    "git.allowForcePush": false,
+    "git.decorations.enabled": false
+}
