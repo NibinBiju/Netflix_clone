@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:netflix_clone/utils/image_constants.dart';
-import 'package:netflix_clone/components/subtext.dart';
+import 'package:netflix_clone/view/home/subtext.dart';
 
 class ListPlayIInfo extends StatelessWidget {
   const ListPlayIInfo({

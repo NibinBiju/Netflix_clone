@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:netflix_clone/utils/colors.dart';
 import 'package:netflix_clone/view/coming_soon/coming_soon_page.dart';
-import 'package:netflix_clone/view/home.dart';
+import 'package:netflix_clone/view/home/home.dart';
 
 class BottomNaviBar extends StatefulWidget {
   const BottomNaviBar({

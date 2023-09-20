@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:netflix_clone/view/splash.dart';
+import 'package:netflix_clone/view/splash%20screen/splash.dart';
 
 void main() {
-  runApp(Myapp());
+  runApp(const Myapp());
 }
 
 class Myapp extends StatelessWidget {
@@ -10,7 +10,7 @@ class Myapp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: SplashScreen(),
     );

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:netflix_clone/components/head_text.dart';
+import 'package:netflix_clone/view/home/head_text.dart';
 import 'package:netflix_clone/utils/image_constants.dart';
 
 class ContinueWatchingTile extends StatelessWidget {

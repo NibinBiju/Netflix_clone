@@ -1,12 +1,12 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:netflix_clone/components/continue_watching.dart';
-import 'package:netflix_clone/components/movie_list_tile.dart';
-import 'package:netflix_clone/components/preview.dart';
-import 'package:netflix_clone/components/custom_text_app_bar.dart';
+import 'package:netflix_clone/view/home/continue_watching.dart';
+import 'package:netflix_clone/view/home/movie_list_tile.dart';
+import 'package:netflix_clone/view/home/preview.dart';
+import 'package:netflix_clone/view/home/custom_text_app_bar.dart';
 import 'package:netflix_clone/utils/image_constants.dart';
 import 'package:netflix_clone/utils/list_paly_info.dart';
-import 'package:netflix_clone/components/tapbar.dart';
+import 'package:netflix_clone/view/home/tapbar.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key, required this.profileName});

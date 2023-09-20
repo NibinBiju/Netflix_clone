@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:netflix_clone/components/custom_text_app_bar.dart';
+import 'package:netflix_clone/view/home/custom_text_app_bar.dart';
 import 'package:netflix_clone/utils/image_constants.dart';
 
 class TapBarNetflix extends StatelessWidget {

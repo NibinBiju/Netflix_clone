@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:netflix_clone/utils/colors.dart';
 import 'package:netflix_clone/utils/image_constants.dart';
-import 'package:netflix_clone/view/catogory_page.dart';
+import 'package:netflix_clone/view/profile_page/profile_page.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -21,7 +21,7 @@ class _SplashScreenState extends State<SplashScreen> {
     await Future.delayed(const Duration(seconds: 4))
         .then((value) => Navigator.pushReplacement(context, MaterialPageRoute(
               builder: (context) {
-                return CategoryPage();
+                return ProfilePage();
               },
             )));
   }

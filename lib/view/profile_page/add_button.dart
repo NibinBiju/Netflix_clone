@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:netflix_clone/components/subtext.dart';
+import 'package:netflix_clone/view/home/subtext.dart';
 
 class AddButton extends StatelessWidget {
   const AddButton({

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:netflix_clone/components/head_text.dart';
+import 'package:netflix_clone/view/home/head_text.dart';
 
 class MovieListTile extends StatelessWidget {
   const MovieListTile({
