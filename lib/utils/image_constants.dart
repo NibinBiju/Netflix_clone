@@ -19,7 +19,6 @@ class MoiveImageConst {
 
 List carousalImages = [
   'assets/images/Rectangle 26.png',
-  'assets/images/Carteles _Interstellar_.jpeg',
-  'assets/images/Fight Club.jpeg',
-  'assets/images/Joker.png',
+  'assets/images/Rectangle 26 (1).png',
+  'assets/images/Rectangle 26 (2).png',
 ];

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:netflix_clone/utils/colors.dart';
 import 'package:netflix_clone/view/coming_soon/coming_soon_page.dart';
 import 'package:netflix_clone/view/home/home.dart';
+import 'package:netflix_clone/view/search_page/search_page.dart';
 
 class BottomNaviBar extends StatefulWidget {
   const BottomNaviBar({
@@ -18,14 +19,7 @@ class _BottomNaviBarState extends State<BottomNaviBar> {
 
   List myPages = [
     const Home(profileName: 'nibin'),
-    const Center(
-      child: Text(
-        'search',
-        style: TextStyle(
-          color: Colors.white,
-        ),
-      ),
-    ),
+    const SearchPage(),
     ComingSoon(),
     const Center(
       child: Text(
