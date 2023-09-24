@@ -22,3 +22,5 @@ List carousalImages = [
   'assets/images/Rectangle 26 (1).png',
   'assets/images/Rectangle 26 (2).png',
 ];
+
+List topSearch = ['assets/images/Rectangle 21.png'];
