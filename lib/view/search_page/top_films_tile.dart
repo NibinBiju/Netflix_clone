@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:netflix_clone/utils/image_constants.dart';
 import 'package:netflix_clone/view/home/head_text.dart';
 
 class TopSearchFilmsCard extends StatelessWidget {
@@ -24,45 +23,49 @@ class TopSearchFilmsCard extends StatelessWidget {
           child: ListView.builder(
               itemCount: 10,
               itemBuilder: (context, index) {
-                return Container(
-                  width: 376,
-                  height: 100,
-                  color: const Color.fromARGB(255, 85, 84, 84),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Row(
-                        children: [
-                          Container(
-                            height: 100,
-                            width: 170,
-                            decoration: BoxDecoration(
-                                image: DecorationImage(
-                                    image: AssetImage(topSearch[index]),
-                                    fit: BoxFit.fill)),
-                          ),
-                          const Padding(
-                            padding: EdgeInsets.only(left: 10),
-                            child: Text(
-                              'Citation',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 18,
-                                fontWeight: FontWeight.w500,
+                return Padding(
+                  padding: const EdgeInsets.only(top: 10),
+                  child: Container(
+                    width: 376,
+                    height: 100,
+                    color: const Color.fromARGB(255, 85, 84, 84),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          children: [
+                            Container(
+                              height: 100,
+                              width: 170,
+                              decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                      image: AssetImage(
+                                          'assets/images/Rectangle 21.png'),
+                                      fit: BoxFit.fill)),
+                            ),
+                            const Padding(
+                              padding: EdgeInsets.only(left: 10),
+                              child: Text(
+                                'Citation',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w500,
+                                ),
                               ),
                             ),
-                          ),
-                        ],
-                      ),
-                      const Padding(
-                        padding: EdgeInsets.only(right: 12),
-                        child: Icon(
-                          Icons.play_circle_outline_outlined,
-                          color: Colors.white,
-                          size: 29,
+                          ],
                         ),
-                      ),
-                    ],
+                        const Padding(
+                          padding: EdgeInsets.only(right: 12),
+                          child: Icon(
+                            Icons.play_circle_outline_outlined,
+                            color: Colors.white,
+                            size: 29,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 );
               }),
