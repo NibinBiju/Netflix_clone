@@ -24,7 +24,7 @@ class TopSearchFilmsCard extends StatelessWidget {
               itemCount: 10,
               itemBuilder: (context, index) {
                 return Padding(
-                  padding: const EdgeInsets.only(top: 10),
+                  padding: const EdgeInsets.only(top: 7),
                   child: Container(
                     width: 376,
                     height: 100,
@@ -37,7 +37,7 @@ class TopSearchFilmsCard extends StatelessWidget {
                             Container(
                               height: 100,
                               width: 170,
-                              decoration: BoxDecoration(
+                              decoration: const BoxDecoration(
                                   image: DecorationImage(
                                       image: AssetImage(
                                           'assets/images/Rectangle 21.png'),

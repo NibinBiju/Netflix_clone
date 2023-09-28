@@ -16,6 +16,8 @@ class YoutubeTile extends StatelessWidget {
         YoutubePlayerController(
       initialVideoId: videos.videoId,
       flags: const YoutubePlayerFlags(
+        captionLanguage: 'en',
+        enableCaption: true,
         autoPlay: false,
         mute: true,
       ),
@@ -23,7 +25,15 @@ class YoutubeTile extends StatelessWidget {
 
     return SizedBox(
       child: YoutubePlayer(
-        topActions: [Icon(Icons.share)],
+        bottomActions: [
+          IconButton(
+            onPressed: () {},
+            icon: Icon(
+              Icons.share,
+              color: Colors.white,
+            ),
+          )
+        ],
         controller: youtubeplayercountroller,
         showVideoProgressIndicator: true,
         progressIndicatorColor: Colors.red,
