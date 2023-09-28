@@ -28,7 +28,7 @@ class ContinueWatchingTile extends StatelessWidget {
           SizedBox(
             height: 160,
             child: ListView.builder(
-              itemCount: 20,
+              itemCount: MoiveImageConst.continueWatch.length,
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) => Container(
                 decoration:
@@ -39,7 +39,7 @@ class ContinueWatchingTile extends StatelessWidget {
                   alignment: Alignment.bottomCenter,
                   children: [
                     Image.asset(
-                      MoiveImageConst.movie,
+                      MoiveImageConst.continueWatch[index],
                       fit: BoxFit.fill,
                     ),
                     Padding(

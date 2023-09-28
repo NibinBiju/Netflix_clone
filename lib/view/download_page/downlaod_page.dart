@@ -14,18 +14,18 @@ class DownloadPage extends StatelessWidget {
           'Smart Downloads',
           style: TextStyle(
             fontWeight: FontWeight.w300,
-            fontSize: 13,
+            fontSize: 17,
           ),
         ),
       ),
       body: Column(
         children: [
           const Padding(
-            padding: EdgeInsets.only(right: 130),
+            padding: EdgeInsets.only(right: 50, left: 2),
             child: Text(
               'Introducing Downloads For You',
               style: TextStyle(
-                fontSize: 19,
+                fontSize: 25,
                 fontWeight: FontWeight.w700,
                 color: Colors.white,
               ),
@@ -42,29 +42,47 @@ class DownloadPage extends StatelessWidget {
             ),
           ),
           const SizedBox(
-            height: 10,
+            height: 14,
           ),
           const CircleAvatar(
-            radius: 110,
+            radius: 106,
             backgroundColor: Colors.grey,
           ),
           const SizedBox(
             height: 15,
           ),
           Padding(
-            padding: const EdgeInsets.all(4.0),
+            padding: const EdgeInsets.only(left: 20, right: 20, top: 18),
             child: Container(
               width: MediaQuery.of(context).size.width,
-              height: 60,
+              height: 40,
               color: Colors.blue,
               child: const Center(
                 child: Text(
                   'SETUP',
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: 23,
+                    fontSize: 19,
                     fontWeight: FontWeight.w300,
                   ),
+                ),
+              ),
+            ),
+          ),
+          SizedBox(
+            height: 60,
+          ),
+          Container(
+            height: 33,
+            width: 240,
+            color: const Color.fromARGB(255, 83, 83, 83),
+            child: Center(
+              child: Text(
+                'Find Something To Download',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 16,
+                  fontWeight: FontWeight.w700,
                 ),
               ),
             ),

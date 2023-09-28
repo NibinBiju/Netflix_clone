@@ -19,7 +19,7 @@ class Previews extends StatelessWidget {
         SizedBox(
           height: 110,
           child: ListView.builder(
-            itemCount: 10,
+            itemCount: PreviewImage.image1.length,
             scrollDirection: Axis.horizontal,
             itemBuilder: (context, index) => Padding(
               padding: const EdgeInsets.all(4.0),
@@ -27,7 +27,7 @@ class Previews extends StatelessWidget {
                 backgroundColor: Colors.black,
                 radius: 52,
                 child: Image.asset(
-                  PreviewImage.image1,
+                  PreviewImage.image1[index],
                   fit: BoxFit.fill,
                 ),
               ),

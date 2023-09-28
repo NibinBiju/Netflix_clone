@@ -14,6 +14,7 @@ class TapBarNetflix extends StatelessWidget {
       child: SizedBox(
         height: 60,
         child: ListView(
+          physics: NeverScrollableScrollPhysics(),
           scrollDirection: Axis.horizontal,
           children: [
             Row(

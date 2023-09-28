@@ -22,7 +22,7 @@ class Home extends StatelessWidget {
             children: [
               CarouselSlider(
                   items: List.generate(
-                    carousalImages.length,
+                    MoiveImageConst.carousalImages.length,
                     (index) => Container(
                       height: 460,
                       decoration: BoxDecoration(
@@ -37,7 +37,8 @@ class Home extends StatelessWidget {
                                 Colors.black,
                               ]),
                           image: DecorationImage(
-                              image: AssetImage(carousalImages[index]),
+                              image: AssetImage(
+                                  MoiveImageConst.carousalImages[index]),
                               fit: BoxFit.fill)),
                     ),
                   ),
@@ -76,10 +77,13 @@ class Home extends StatelessWidget {
           const SizedBox(
             height: 43,
           ),
+          //preview
           const Previews(htext: 'Previews'),
 
           //continue watching
-          ContinueWatchingTile(text: 'Contine watching for $profileName'),
+          ContinueWatchingTile(
+            text: 'Contine watching for $profileName',
+          ),
 
           //popular on netflix
           MovieListTile(

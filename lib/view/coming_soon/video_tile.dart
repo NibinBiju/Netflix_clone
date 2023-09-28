@@ -23,28 +23,39 @@ class YoutubeTile extends StatelessWidget {
       ),
     );
 
-    return SizedBox(
-      child: YoutubePlayer(
-        bottomActions: [
-          IconButton(
-            onPressed: () {},
-            icon: Icon(
-              Icons.share,
-              color: Colors.white,
+    return Column(
+      children: [
+        SizedBox(
+          child: YoutubePlayer(
+            bottomActions: [
+              IconButton(
+                onPressed: () {},
+                icon: Icon(
+                  Icons.share,
+                  color: Colors.white,
+                ),
+              )
+            ],
+            controller: youtubeplayercountroller,
+            showVideoProgressIndicator: true,
+            progressIndicatorColor: Colors.red,
+            progressColors: const ProgressBarColors(
+              playedColor: Colors.red,
+              handleColor: Colors.red,
             ),
-          )
-        ],
-        controller: youtubeplayercountroller,
-        showVideoProgressIndicator: true,
-        progressIndicatorColor: Colors.red,
-        progressColors: const ProgressBarColors(
-          playedColor: Colors.red,
-          handleColor: Colors.red,
+            onReady: () {
+              youtubeplayercountroller.addListener(() {});
+            },
+          ),
         ),
-        onReady: () {
-          youtubeplayercountroller.addListener(() {});
-        },
-      ),
+        ListTile(
+          trailing: Icon(
+            Icons.share,
+            color: Colors.white,
+            size: 23,
+          ),
+        )
+      ],
     );
   }
 }
