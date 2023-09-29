@@ -3,6 +3,7 @@ import 'package:netflix_clone/utils/colors.dart';
 import 'package:netflix_clone/view/coming_soon/coming_soon_page.dart';
 import 'package:netflix_clone/view/download_page/downlaod_page.dart';
 import 'package:netflix_clone/view/home/home.dart';
+import 'package:netflix_clone/view/more_page/more_page.dart';
 import 'package:netflix_clone/view/search_page/search_page.dart';
 
 class BottomNaviBar extends StatefulWidget {
@@ -23,14 +24,7 @@ class _BottomNaviBarState extends State<BottomNaviBar> {
     const SearchPage(),
     ComingSoon(),
     const DownloadPage(),
-    const Center(
-      child: Text(
-        'more',
-        style: TextStyle(
-          color: Colors.white,
-        ),
-      ),
-    ),
+    MorePage(),
   ];
 
   @override

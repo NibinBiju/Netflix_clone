@@ -9,37 +9,6 @@ import 'package:netflix_clone/utils/image_constants.dart';
 class ProfilePage extends StatelessWidget {
   ProfilePage({super.key});
 
-  final List image = [
-    ProfileModel(
-      name: 'Emenalo',
-      profileImage: 'assets/images/Rectangle 2.png',
-    ),
-    ProfileModel(
-      name: 'Oneyaka',
-      profileImage: 'assets/images/Rectangle 3.png',
-    ),
-    ProfileModel(
-      name: 'Thelma',
-      profileImage: 'assets/images/Rectangle 4.png',
-    ),
-    ProfileModel(
-      name: 'Kids',
-      profileImage: 'assets/images/Rectangle 5.png',
-    ),
-    ProfileModel(
-      name: 'Nibin',
-      profileImage: 'assets/images/Rectangle 3.png',
-    ),
-  ];
-
-  final List categoaries = [
-    'Emenalo',
-    'Oneyaka',
-    'Thelma',
-    'Kids',
-    'Nibin',
-  ];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -80,14 +49,14 @@ class ProfilePage extends StatelessWidget {
                     crossAxisCount: 2),
                 padding:
                     const EdgeInsets.symmetric(horizontal: 70, vertical: 180),
-                itemCount: image.length + 1,
+                itemCount: NetflixImageConst.image.length + 1,
                 itemBuilder: (context, index) {
-                  if (index == image.length) {
+                  if (index == NetflixImageConst.image.length) {
                     return const AddButton();
                   } else {
                     //profile tile
                     return ProfileTile(
-                      profileModel: image[index],
+                      profileModel: NetflixImageConst.image[index],
                     );
                   }
                 },

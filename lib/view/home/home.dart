@@ -22,7 +22,7 @@ class Home extends StatelessWidget {
             children: [
               CarouselSlider(
                   items: List.generate(
-                    MoiveImageConst.carousalImages.length,
+                    NetflixImageConst.carousalImages.length,
                     (index) => Container(
                       height: 460,
                       decoration: BoxDecoration(
@@ -38,7 +38,7 @@ class Home extends StatelessWidget {
                               ]),
                           image: DecorationImage(
                               image: AssetImage(
-                                  MoiveImageConst.carousalImages[index]),
+                                  NetflixImageConst.carousalImages[index]),
                               fit: BoxFit.fill)),
                     ),
                   ),
@@ -87,30 +87,32 @@ class Home extends StatelessWidget {
 
           //popular on netflix
           MovieListTile(
-              text: 'Popular on Netflix', image: MoiveImageConst.popularMovie),
+              text: 'Popular on Netflix',
+              image: NetflixImageConst.popularMovie),
 
           //trending now
           MovieListTile(
             text: 'Trending Now',
-            image: MoiveImageConst.trendingMovie,
+            image: NetflixImageConst.trendingMovie,
           ),
 
           //top in country
           MovieListTile(
               text: 'Top 10 in Nigeria Today',
-              image: MoiveImageConst.popuInCountry),
+              image: NetflixImageConst.popuInCountry),
 
           //My list
-          MovieListTile(text: 'My List', image: MoiveImageConst.popuInCountry),
+          MovieListTile(
+              text: 'My List', image: NetflixImageConst.popuInCountry),
 
           //country movies
           MovieListTile(
-              text: 'African Movies', image: MoiveImageConst.popuInCountry),
+              text: 'African Movies', image: NetflixImageConst.popuInCountry),
 
           //Nollywood movies & tv
           MovieListTile(
               text: 'Nollywood Movies & TV',
-              image: MoiveImageConst.popuInCountry),
+              image: NetflixImageConst.popuInCountry),
         ],
       ),
     );

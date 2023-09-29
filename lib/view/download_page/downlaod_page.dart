@@ -52,7 +52,7 @@ class DownloadPage extends StatelessWidget {
             height: 15,
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 20, right: 20, top: 18),
+            padding: const EdgeInsets.only(left: 20, right: 20),
             child: Container(
               width: MediaQuery.of(context).size.width,
               height: 40,
@@ -69,14 +69,14 @@ class DownloadPage extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 60,
           ),
           Container(
             height: 33,
             width: 240,
             color: const Color.fromARGB(255, 83, 83, 83),
-            child: Center(
+            child: const Center(
               child: Text(
                 'Find Something To Download',
                 style: TextStyle(

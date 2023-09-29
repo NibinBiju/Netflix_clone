@@ -1,3 +1,5 @@
+import 'package:netflix_clone/db/db_models/db_models.dart';
+
 class ImageConstant {
   static String mainLogo = 'assets/images/logos_netflix.png';
   static String homeTopFilmImage = 'assets/images/Rectangle 26.png';
@@ -17,7 +19,7 @@ class PreviewImage {
   ];
 }
 
-class MoiveImageConst {
+class NetflixImageConst {
   static List continueWatch = [
     'assets/images/Rectangle 12.png',
     'assets/images/Rectangle 11 (1).png',
@@ -34,5 +36,26 @@ class MoiveImageConst {
     'assets/images/Rectangle 26 (2).png',
   ];
 
-  List topSearch = ['assets/images/Rectangle 21.png'];
+  static List image = [
+    ProfileModel(
+      name: 'Emenalo',
+      profileImage: 'assets/images/Rectangle 2.png',
+    ),
+    ProfileModel(
+      name: 'Oneyaka',
+      profileImage: 'assets/images/Rectangle 3.png',
+    ),
+    ProfileModel(
+      name: 'Thelma',
+      profileImage: 'assets/images/Rectangle 4.png',
+    ),
+    ProfileModel(
+      name: 'Kids',
+      profileImage: 'assets/images/Rectangle 5.png',
+    ),
+    ProfileModel(
+      name: 'Nibin',
+      profileImage: 'assets/images/Rectangle 3.png',
+    ),
+  ];
 }

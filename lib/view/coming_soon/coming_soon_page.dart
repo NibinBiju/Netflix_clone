@@ -4,7 +4,7 @@ import 'package:netflix_clone/utils/colors.dart';
 import 'package:netflix_clone/view/coming_soon/video_tile.dart';
 
 class ComingSoon extends StatelessWidget {
-  ComingSoon({super.key});
+  const ComingSoon({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +37,7 @@ class ComingSoon extends StatelessWidget {
             videos: videoList[index],
           );
         },
-        separatorBuilder: (context, index) => Divider(),
+        separatorBuilder: (context, index) => const Divider(),
       ),
     );
   }
