@@ -86,16 +86,19 @@ class MorePage extends StatelessWidget {
                         Icon(
                           Icons.message_outlined,
                           color: Colors.white,
-                          size: 34,
+                          size: 27,
                         ),
                         SizedBox(
                           width: 10,
                         ),
                         HeadText(
                           htext: 'Tell friends about Netflix',
-                          fontsize: 27,
+                          fontsize: 23,
                         )
                       ],
+                    ),
+                    const SizedBox(
+                      height: 9,
                     ),
                     const Text(
                       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco ',
@@ -154,10 +157,98 @@ class MorePage extends StatelessWidget {
                           )),
                         ),
                       ],
+                    ),
+                    Expanded(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                            width: 40,
+                            height: 40,
+                            decoration: BoxDecoration(
+                              color: const Color.fromRGBO(44, 183, 66, 1),
+                              borderRadius: BorderRadius.circular(11),
+                            ),
+                            child: Image.asset(ImageConstant.whatsApp),
+                          ),
+                          const SizedBox(
+                            height: 60,
+                            child: VerticalDivider(
+                              color: Colors.white,
+                              width: 56,
+                            ),
+                          ),
+                          Container(
+                            width: 40,
+                            height: 40,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(11),
+                              color: const Color.fromRGBO(57, 81, 133, 1),
+                            ),
+                            child: Image.asset(ImageConstant.facebook),
+                          ),
+                          const SizedBox(
+                            height: 60,
+                            child: VerticalDivider(
+                              color: Colors.white,
+                              width: 56,
+                            ),
+                          ),
+                          Container(
+                            width: 40,
+                            height: 40,
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(11),
+                            ),
+                            child: Image.asset(ImageConstant.gmail),
+                          ),
+                          const SizedBox(
+                            height: 60,
+                            child: VerticalDivider(
+                              color: Colors.white,
+                              width: 56,
+                            ),
+                          ),
+                          const Padding(
+                            padding: EdgeInsets.only(top: 20),
+                            child: Column(
+                              children: [
+                                Icon(
+                                  Icons.more_horiz,
+                                  color: Colors.white,
+                                  size: 32,
+                                ),
+                                Text(
+                                  'More',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                  ),
+                                )
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
                     )
                   ],
                 ),
               ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Row(
+                children: [
+                  Image.asset('assets/images/noto-v1_check-mark-button.png'),
+                  const SizedBox(
+                    width: 5,
+                  ),
+                  const HeadText(htext: 'My List', fontsize: 19)
+                ],
+              ),
+            ),
+            const Divider(
+              color: Colors.white,
             )
           ],
         ),

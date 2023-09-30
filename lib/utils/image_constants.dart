@@ -6,6 +6,9 @@ class ImageConstant {
   static String mainLogoIcon = 'assets/images/logos_netflix-icon.png';
   static String addIcon = 'assets/images/ant-design_plus-outlined.png';
   static String infoIcon = 'assets/images/feather_info.png';
+  static String whatsApp = 'assets/images/logos_whatsapp.png';
+  static String facebook = 'assets/images/logos_facebook.png';
+  static String gmail = 'assets/images/Gmail-logo 1.png';
 }
 
 class PreviewImage {
