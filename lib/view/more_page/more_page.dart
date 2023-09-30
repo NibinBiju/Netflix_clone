@@ -1,9 +1,10 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:netflix_clone/db/db_models/db_models.dart';
 import 'package:netflix_clone/utils/colors.dart';
 import 'package:netflix_clone/utils/image_constants.dart';
+import 'package:netflix_clone/view/home/head_text.dart';
 import 'package:netflix_clone/view/home/subtext.dart';
-import 'package:netflix_clone/view/profile_page/add_button.dart';
 
 class MorePage extends StatelessWidget {
   const MorePage({super.key});
@@ -16,7 +17,7 @@ class MorePage extends StatelessWidget {
         body: Column(
           children: [
             SizedBox(
-              height: 160,
+              height: 140,
               child: ListView.builder(
                 padding: const EdgeInsets.only(
                   left: 14,
@@ -26,11 +27,136 @@ class MorePage extends StatelessWidget {
                 itemCount: NetflixImageConst.image.length + 1,
                 itemBuilder: (context, index) {
                   if (NetflixImageConst.image.length == index) {
-                    return const AddButton();
+                    return Padding(
+                      padding: const EdgeInsets.only(top: 4),
+                      child: Column(
+                        children: [
+                          Container(
+                            width: 95,
+                            height: 90,
+                            decoration: BoxDecoration(
+                                border: Border.all(
+                              width: 2,
+                              color: Colors.grey,
+                            )),
+                            child: Center(
+                              child: Image.asset(
+                                'assets/images/ant-design_plus-outlined (2).png',
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    );
                   }
                   return ProfileCard(
                       profileModel: NetflixImageConst.image[index]);
                 },
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(right: 21),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  IconButton(
+                      onPressed: () {},
+                      icon: const Icon(
+                        Icons.edit,
+                        color: Colors.white,
+                        size: 20,
+                      )),
+                  const HeadText(
+                    htext: 'Manage Profile',
+                    fontsize: 20,
+                  )
+                ],
+              ),
+            ),
+            Container(
+              width: MediaQuery.of(context).size.width,
+              height: 290,
+              color: const Color.fromRGBO(26, 26, 26, 1),
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  children: [
+                    const Row(
+                      children: [
+                        Icon(
+                          Icons.message_outlined,
+                          color: Colors.white,
+                          size: 34,
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        HeadText(
+                          htext: 'Tell friends about Netflix',
+                          fontsize: 27,
+                        )
+                      ],
+                    ),
+                    const Text(
+                      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco ',
+                      style: TextStyle(
+                        color: Colors.white,
+                      ),
+                      textAlign: TextAlign.justify,
+                    ),
+                    Row(
+                      children: [
+                        CupertinoButton(
+                            child: const Text(
+                              'Terms & Conditions',
+                              style: TextStyle(
+                                color: Color.fromRGBO(196, 196, 196, 1),
+                                fontSize: 15,
+                                decoration: TextDecoration.underline,
+                              ),
+                            ),
+                            onPressed: () {}),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Container(
+                          height: 39,
+                          width: 270,
+                          color: Colors.black,
+                          child: const TextField(
+                            style: TextStyle(
+                              fontSize: 24,
+                              color: Colors.white,
+                            ),
+                            cursorHeight: 20,
+                            cursorColor: Colors.black,
+                            decoration: InputDecoration(
+                              focusedBorder: InputBorder.none,
+                            ),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          height: 37,
+                          width: 110,
+                          color: Colors.grey[300],
+                          child: const Center(
+                              child: Text(
+                            'Copy Link',
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.w700,
+                            ),
+                          )),
+                        ),
+                      ],
+                    )
+                  ],
+                ),
               ),
             )
           ],
@@ -51,7 +177,7 @@ class ProfileCard extends StatelessWidget {
     return Column(
       children: [
         SizedBox(
-          width: 120,
+          width: 110,
           height: 100,
           child: Image.asset(
             profileModel.profileImage,
