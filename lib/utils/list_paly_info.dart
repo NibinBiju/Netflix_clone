@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:netflix_clone/utils/image_constants.dart';
 import 'package:netflix_clone/view/home/subtext.dart';
+import 'package:netflix_clone/view/my_list_page/my_list.dart';
 
 class ListPlayIInfo extends StatelessWidget {
   const ListPlayIInfo({
@@ -12,14 +13,23 @@ class ListPlayIInfo extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Column(
-          children: [
-            Image.asset(ImageConstant.addIcon),
-            const SizedBox(
-              height: 4,
-            ),
-            const SubText(text: 'My List'),
-          ],
+        InkWell(
+          onTap: () {
+            Navigator.push(context, MaterialPageRoute(
+              builder: (context) {
+                return MyList();
+              },
+            ));
+          },
+          child: Column(
+            children: [
+              Image.asset(ImageConstant.addIcon),
+              const SizedBox(
+                height: 4,
+              ),
+              const SubText(text: 'My List'),
+            ],
+          ),
         ),
         const SizedBox(
           width: 53,

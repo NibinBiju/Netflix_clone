@@ -6,9 +6,14 @@ import 'package:netflix_clone/utils/image_constants.dart';
 import 'package:netflix_clone/view/home/head_text.dart';
 import 'package:netflix_clone/view/home/subtext.dart';
 
-class MorePage extends StatelessWidget {
+class MorePage extends StatefulWidget {
   const MorePage({super.key});
 
+  @override
+  State<MorePage> createState() => _MorePageState();
+}
+
+class _MorePageState extends State<MorePage> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -49,8 +54,10 @@ class MorePage extends StatelessWidget {
                       ),
                     );
                   }
-                  return ProfileCard(
-                      profileModel: NetflixImageConst.image[index]);
+                  return InkWell(
+                    child: ProfileCard(
+                        profileModel: NetflixImageConst.image[index]),
+                  );
                 },
               ),
             ),
@@ -249,7 +256,36 @@ class MorePage extends StatelessWidget {
             ),
             const Divider(
               color: Colors.white,
-            )
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 27),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    children: [
+                      HeadText(htext: 'App Settings', fontsize: 18),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 13,
+                  ),
+                  InkWell(
+                      onTap: () {
+                        print('account');
+                      },
+                      child: HeadText(htext: 'Account', fontsize: 18)),
+                  SizedBox(
+                    height: 13,
+                  ),
+                  HeadText(htext: 'Help', fontsize: 18),
+                  SizedBox(
+                    height: 13,
+                  ),
+                  HeadText(htext: 'Sign Out', fontsize: 18),
+                ],
+              ),
+            ),
           ],
         ),
       ),
