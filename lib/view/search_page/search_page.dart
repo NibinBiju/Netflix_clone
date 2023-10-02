@@ -50,7 +50,7 @@ class SearchPage extends StatelessWidget {
             ),
 
             //top searches
-            TopSearchFilmsCard(),
+            const TopSearchFilmsCard(),
           ],
         ),
       ),

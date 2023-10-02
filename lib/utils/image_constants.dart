@@ -1,4 +1,5 @@
 import 'package:netflix_clone/db/db_models/db_models.dart';
+import 'package:netflix_clone/view/search_page/search_data.dart';
 
 class ImageConstant {
   static String mainLogo = 'assets/images/logos_netflix.png';
@@ -60,5 +61,24 @@ class NetflixImageConst {
       name: 'Nibin',
       profileImage: 'assets/images/Rectangle 3.png',
     ),
+  ];
+
+  static List topSearch = [
+    TopSearchModel(
+        filmName: 'Citation', imagepath: 'assets/images/Rectangle 21.png'),
+    TopSearchModel(
+        filmName: 'Olatura', imagepath: 'assets/images/Rectangle 22.png'),
+    TopSearchModel(
+        filmName: 'Braeking Bad',
+        imagepath: 'assets/images/Rectangle 22 (1).png'),
+    TopSearchModel(
+        filmName: 'The Setup', imagepath: 'assets/images/Rectangle 21 (1).png'),
+    TopSearchModel(
+        filmName: 'Ozark', imagepath: 'assets/images/Rectangle 21 (2).png'),
+    TopSearchModel(
+        filmName: 'Governer', imagepath: 'assets/images/Rectangle 22 (2).png'),
+    TopSearchModel(
+        filmName: 'Your Execellancy',
+        imagepath: 'assets/images/Rectangle 21 (3).png'),
   ];
 }

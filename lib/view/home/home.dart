@@ -26,16 +26,6 @@ class Home extends StatelessWidget {
                     (index) => Container(
                       height: 460,
                       decoration: BoxDecoration(
-                          gradient: const LinearGradient(
-                              begin: Alignment.topCenter,
-                              end: Alignment.bottomCenter,
-                              colors: [
-                                Colors.transparent,
-                                Colors.transparent,
-                                Colors.transparent,
-                                Colors.transparent,
-                                Colors.black,
-                              ]),
                           image: DecorationImage(
                               image: AssetImage(
                                   NetflixImageConst.carousalImages[index]),

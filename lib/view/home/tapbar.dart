@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:netflix_clone/view/home/custom_text_app_bar.dart';
 import 'package:netflix_clone/utils/image_constants.dart';
+import 'package:netflix_clone/view/my_list_page/my_list.dart';
 
 class TapBarNetflix extends StatelessWidget {
   const TapBarNetflix({
@@ -14,7 +15,6 @@ class TapBarNetflix extends StatelessWidget {
       child: SizedBox(
         height: 60,
         child: ListView(
-          physics: NeverScrollableScrollPhysics(),
           scrollDirection: Axis.horizontal,
           children: [
             Row(
@@ -40,7 +40,16 @@ class TapBarNetflix extends StatelessWidget {
                 const SizedBox(
                   width: 30,
                 ),
-                const CustomTapBar(text: 'My List')
+                InkWell(
+                  onTap: () {
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: (context) {
+                        return MyList();
+                      },
+                    ));
+                  },
+                  child: const CustomTapBar(text: 'My List'),
+                )
               ],
             ),
           ],
