@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:netflix_clone/db/db_models/db_videos.dart';
+import 'package:netflix_clone/model/db_models/db_videos.dart';
 import 'package:netflix_clone/utils/colors.dart';
 import 'package:netflix_clone/view/coming_soon/video_tile.dart';
 

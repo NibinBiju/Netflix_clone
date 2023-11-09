@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:netflix_clone/db/db_models/db_models.dart';
+import 'package:netflix_clone/model/db_models/db_models.dart';
 import 'package:netflix_clone/utils/colors.dart';
 import 'package:netflix_clone/utils/image_constants.dart';
 import 'package:netflix_clone/view/home/head_text.dart';

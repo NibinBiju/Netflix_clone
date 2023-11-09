@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:netflix_clone/controller/api_controller.dart';
+import 'package:netflix_clone/model/api_model/api_model.dart';
 import 'package:netflix_clone/view/home/head_text.dart';
 
-class MovieListTile extends StatelessWidget {
+class MovieListTile extends StatefulWidget {
   const MovieListTile({
     super.key,
     required this.text,
@@ -12,7 +14,17 @@ class MovieListTile extends StatelessWidget {
   final String image;
 
   @override
+  State<MovieListTile> createState() => _MovieListTileState();
+}
+
+class _MovieListTileState extends State<MovieListTile> {
+  ApiController? apiController;
+  MovieModel? model;
+
+  @override
   Widget build(BuildContext context) {
+    apiController?.fetchPopualrData();
+
     return Padding(
       padding: const EdgeInsets.only(top: 10),
       child: Column(
@@ -23,7 +35,7 @@ class MovieListTile extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10),
                 child: HeadText(
-                  htext: text,
+                  htext: widget.text,
                   fontsize: 20.92,
                 ),
               ),
@@ -44,10 +56,7 @@ class MovieListTile extends StatelessWidget {
                   child: Stack(
                     alignment: Alignment.bottomCenter,
                     children: [
-                      Image.asset(
-                        image,
-                        fit: BoxFit.fill,
-                      ),
+                      Image.network(model?.results?[index].posterPath ?? ""),
                     ],
                   ),
                 ),

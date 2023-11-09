@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:netflix_clone/db/db_models/db_models.dart';
+import 'package:netflix_clone/controller/api_controller.dart';
+import 'package:netflix_clone/model/db_models/db_models.dart';
 import 'package:netflix_clone/view/profile_page/add_button.dart';
 import 'package:netflix_clone/view/home/bottom_navi.dart';
 import 'package:netflix_clone/view/home/subtext.dart';

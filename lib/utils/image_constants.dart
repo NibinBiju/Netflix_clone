@@ -1,4 +1,4 @@
-import 'package:netflix_clone/db/db_models/db_models.dart';
+import 'package:netflix_clone/model/db_models/db_models.dart';
 import 'package:netflix_clone/view/search_page/search_data.dart';
 
 class ImageConstant {

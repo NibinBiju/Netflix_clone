@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:netflix_clone/controller/api_controller.dart';
 import 'package:netflix_clone/utils/colors.dart';
 import 'package:netflix_clone/view/coming_soon/coming_soon_page.dart';
 import 'package:netflix_clone/view/download_page/downlaod_page.dart';
@@ -18,6 +19,7 @@ class BottomNaviBar extends StatefulWidget {
 class _BottomNaviBarState extends State<BottomNaviBar> {
   // int changeColor
   int changeNavi = 0;
+  ApiController? apiController;
 
   List myPages = [
     const Home(profileName: 'nibin'),
@@ -36,6 +38,7 @@ class _BottomNaviBarState extends State<BottomNaviBar> {
         onTap: (value) {
           setState(() {
             changeNavi = value;
+            apiController?.fetchPopualrData();
           });
         },
         currentIndex: changeNavi,

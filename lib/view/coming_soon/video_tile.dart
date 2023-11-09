@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:netflix_clone/db/db_models/db_videos.dart';
+import 'package:netflix_clone/model/db_models/db_videos.dart';
 import 'package:netflix_clone/view/home/head_text.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
