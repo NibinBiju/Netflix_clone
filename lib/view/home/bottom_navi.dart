@@ -39,6 +39,7 @@ class _BottomNaviBarState extends State<BottomNaviBar> {
           setState(() {
             changeNavi = value;
             apiController?.fetchPopualrData();
+            apiController?.fetchTrendingData();
           });
         },
         currentIndex: changeNavi,

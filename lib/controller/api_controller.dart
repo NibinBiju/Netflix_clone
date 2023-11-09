@@ -16,4 +16,14 @@ class ApiController {
       model = MovieModel.fromJson(jsonData);
     }
   }
+
+  Future<void> fetchTrendingData() async {
+    var uri = Uri.parse(ApiConstants.trendingMovie + ApiConstants.apiKey);
+    var response = await http.get(uri);
+    print(response.body);
+    if (response.statusCode == 200) {
+      var jsonData = jsonDecode(response.body);
+      model = MovieModel.fromJson(jsonData);
+    }
+  }
 }
